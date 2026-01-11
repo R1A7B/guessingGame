@@ -4,14 +4,6 @@
 #include <vector>
 #include <string>
 
-/*
-I wrote 4 functions for writing the output. The first 3 mirror each other on each side of the box, so writing functions will save time and space from not repeating the same method 2x in the main function. 
-OutputTopBottomLine are the lines at the very top and bottom of the output, the "+--...---+"
-BoxTopBottomLine is for the the boxes surrounding the digits for the user's guess
-BoxMiddleLines is for the lines just above and below the line printing the digits themselves
-BoxMiddleLine is the line for printing the digits of the user's input
-*/
-// This function is for printing the top and bottom line of the output, it will save me space from writing this function 2x if I wrote it in the main function
 void printOutputTopBottomLine(int length) {
     std::cout << "+";
            for(int i = 0; i < length; i++) {
@@ -138,7 +130,7 @@ int main(int argc, char* argv[]) {
     std::string rNumber = std::string(lines[rLine]);
 
     // Prompt for user input and what they should be guessing for
-    std::cout << "The secret is a number with " << rNumber.length() << " digits.\n";
+    std::cout << "Let's play a guessing game!\nThe secret is a number with " << rNumber.length() << " characters.\n";
 
     std::cout << "your guess: ";
     std::string userInput;
@@ -199,6 +191,7 @@ int main(int argc, char* argv[]) {
         std::cout << " guesses!\n";
     }
     
+    gg_str.close();
 
     return 0;
 }

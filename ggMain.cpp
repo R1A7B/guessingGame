@@ -106,7 +106,7 @@ void printBoxMiddleLine(std::vector<int> rv, std::string userInput) {
 }
 
 int main(int argc, char* argv[]) {
-    // Basic Error checkign if it's not an openable file or the wrong amount of arguments were sent
+    // Basic Error checking if it's not an openable file or the wrong amount of arguments were sent
     if(argc != 2) {
         std::cerr << "Usage: " << argv[0] << " guessing_game-file\n";
         return 1;
@@ -126,7 +126,7 @@ int main(int argc, char* argv[]) {
     
     // Choosing a random line to collect our random number. srand(time(0)) guarantees a unique number each time by changing the seed.   
     srand(time(0));
-    int rLine = rand() % (size(lines) + 1);
+    int rLine = rand() % size(lines);
     std::string rNumber = std::string(lines[rLine]);
 
     // Prompt for user input and what they should be guessing for
